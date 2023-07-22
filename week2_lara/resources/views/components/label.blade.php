@@ -1,0 +1,1 @@
+<label for="" {{$attributes->merge(['class'=>'form-label'])}}>{{$label}}</label>

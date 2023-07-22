@@ -1,0 +1,25 @@
+<?php
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\BladeController;
+use App\Http\Controllers\Page1Controller;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::resource('/blade',BladeController::class);
+Route::resource('/page1',Page1Controller::class);
+Route::resource('/page2',Page2Controller::class);
+Route::resource('/customer',CustomerController::class);
